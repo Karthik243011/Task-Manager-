@@ -16,9 +16,13 @@ function App() {
   const handleDeleteTask = (index) => {
     const newTasks = [
       ...tasks.slice(0, index),
+    //   slice is a string or an array and return it as a new copy without changing the original.
+    //   Gets tasks before the one to delete
       ...tasks.slice(index + 1),
+      	// Gets tasks after the one to delete
     ];
     setTasks(newTasks);
+    // Updates the task list (without the deleted task)
   };
 
   return (
